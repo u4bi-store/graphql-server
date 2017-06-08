@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/u4bi/graphql#readme",
   "dependencies": {
-    "graphql": "^0.10.1"
+    "express-graphql": "^0.6.6",
+    "graphql": "^0.10.1",
+    "restify": "^4.3.0"
   }
 }
