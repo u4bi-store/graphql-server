@@ -29,4 +29,14 @@ app.listen(4000, ()=> {
         }
 
 
+
+        {
+            customers {
+              id,
+              name,
+              email,
+              age
+            }
+        }
+
 */
