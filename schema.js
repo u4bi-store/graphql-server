@@ -1,3 +1,5 @@
+const axios = require('axios');
+
 const { 
     GraphQLObjectType,
     GraphQLString,
@@ -8,16 +10,19 @@ const {
 } = require('graphql');
 
 
-// hard code 
-const customers = [
-    { id : '1', name : 'John Gang', email : 'gang@gmail.com', age : 14 },
+/* hard code
 
-    { id : '2', name : 'John Kim', email : 'kim@gmail.com', age : 15 },
+    const customers = [
+        { id : '1', name : 'John Gang', email : 'gang@gmail.com', age : 14 },
 
-    { id : '3', name : 'John Min', email : 'min@gmail.com', age : 18 },
+        { id : '2', name : 'John Kim', email : 'kim@gmail.com', age : 15 },
 
-    { id : '4', name : 'John Yu', email : 'yu@gmail.com', age : 18 }            
-];
+        { id : '3', name : 'John Min', email : 'min@gmail.com', age : 18 },
+
+        { id : '4', name : 'John Yu', email : 'yu@gmail.com', age : 18 }            
+    ];
+
+*/
 
 const CustomerType = new GraphQLObjectType({
     name : 'Customer',
@@ -39,7 +44,9 @@ const RootQuery = new GraphQLObjectType({
                 id : { type : GraphQLString }
             },
             resolve(parentValue, args){
-                for(let i = 0; i < customers.length; i++){
+            /*
+            
+            for(let i = 0; i < customers.length; i++){
                     if(customers[i].id == args.id){
                         
                         return customers[i];
@@ -47,13 +54,23 @@ const RootQuery = new GraphQLObjectType({
                     }
                 }
             }
+
+            */
+
+            return axios.get('http://localhost:3000/customers/' + args.id)
+                .then(res => res.data);
+
+            }
         },
         //
         customers : {
             type : new GraphQLList(CustomerType),
             resolve(parentValue, args){
                 
-                return customers;
+                // return customers;
+                return axios.get('http://localhost:3000/customers')
+                    .then(res => res.data);
+
             }
         }
     } 
