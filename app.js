@@ -39,4 +39,42 @@ app.listen(4000, ()=> {
             }
         }
 
+
+    Mutation Query Insert
+
+        mutation{
+        
+            addCustomer( name:"ub", email:"ub@gmail.com", age : 15 ){
+                id,
+                name,
+                email
+            }
+
+        }
+
+
+    Mutation Query Delete
+                
+        mutation{
+        
+            deleteCustomer(id:"4"){
+                id
+            }
+  
+        }
+
+
+    Mutation Query Update
+
+        mutation{
+        
+            editCustomer(id : "2", age: 22){
+                id,
+                age,
+                name
+            }
+        
+        }
+        
+        
 */
