@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev:server": "nodemon app.js",
-    "json:server": "json-server --watch assets/data.json"
+    "json:server": "json-server --watch assets/data.json",
+    "todo-dev:server": "nodemon todo/app.js",
+    "todo-json:server": "json-server --watch assets/todo.json"    
   },
   "keywords": [],
   "author": "",
