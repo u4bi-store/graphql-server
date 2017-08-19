@@ -9,7 +9,8 @@
     "todo-dev:server": "nodemon todo/app.js",
     "todo-json:server": "json-server --watch assets/todo.json",
     "board-dev:server": "nodemon board/app.js",
-    "board-json:server": "json-server --watch assets/board.json"        
+    "board-json:server": "json-server --watch assets/board.json",
+    "gitapi-dev:server": "nodemon github-profile/app.js"        
   },
   "keywords": [],
   "author": "",
