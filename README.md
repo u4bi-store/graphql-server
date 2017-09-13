@@ -24,3 +24,9 @@ npm install
 ```
     npm run gitapi-dev:server
 ```
+
+##### input-object graphql api
+```
+    npm run input-object-dev:server
+    npm run input-object-json:server
+```

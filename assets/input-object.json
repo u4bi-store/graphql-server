@@ -1,0 +1,49 @@
+{
+  "objects": [
+    {
+      "id": "1",
+      "history": [
+        "A Home",
+        "B Home",
+        "C Home"
+      ],
+      "badge": [
+        {
+          "name": "입문자의 휘장",
+          "level": 4
+        },
+        {
+          "name": "대지의 휘장",
+          "level": 5
+        },
+        {
+          "name": "용기의 휘장",
+          "level": 9
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "history": [
+        "D Home",
+        "E Home",
+        "F Home"
+      ],
+      "badge": [
+        {
+          "name": "입문자의 휘장",
+          "level": 14
+        },
+        {
+          "name": "기사의 휘장",
+          "level": 8
+        },
+        {
+          "name": "어둠의 휘장",
+          "level": 2
+        }
+      ]
+    }
+    
+  ]
+}
