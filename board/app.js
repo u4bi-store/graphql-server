@@ -117,13 +117,19 @@ const schema = new GraphQLSchema({
 const app = express();
 
 
+app.use('/graphql', function (req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+    req.method === 'OPTIONS' ? res.sendStatus(200) : next();
+});
+
 app.use('/graphql', expressGraphQL({
     schema   : schema,
     graphiql : true
 }));
 
-app.listen(4000, ()=> {
-    console.log('on port 4000..');
+app.listen(7778, ()=> {
+    console.log('on port 7778..');
 });
 
 

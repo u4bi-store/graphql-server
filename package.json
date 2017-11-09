@@ -8,7 +8,7 @@
     "json:server": "json-server --watch assets/data.json",
     "todo-dev:server": "nodemon todo/app.js",
     "todo-json:server": "json-server --watch assets/todo.json",
-    "board-dev:server": "nodemon board/app.js",
+    "board-dev:server": "node board/app.js",
     "board-json:server": "json-server --watch assets/board.json",
     "gitapi-dev:server": "nodemon github-profile/app.js",
     "input-object-json:server": "json-server --watch assets/input-object.json",
