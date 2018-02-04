@@ -1,3 +1,5 @@
+## GraphQL Demo Server
+
 ```
 npm install
 ```
